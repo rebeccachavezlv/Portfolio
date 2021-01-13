@@ -1,3 +1,19 @@
+$phone-width: 414px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+
 .contactForm{
     display: flex;
     align-items: left;
@@ -26,5 +42,13 @@ input, textarea {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 600;
+
+    @include phone {
+        width: 90vw;
+    }
+
+    @include tablet {
+        width: 45vw;
+    }
 }
 

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import contactReducer from './contact/contact.reducer';
+import portfolioReducer from './portfolio/portfolio.reducer'
 
 export default combineReducers({
-    contact: contactReducer
+    portfolio: portfolioReducer
 });

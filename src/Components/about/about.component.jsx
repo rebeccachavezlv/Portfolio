@@ -13,8 +13,9 @@ const AboutComponent = () => (
                 <img src={headshot} alt=''/>
             </div>
             <div className='bioContainer'>
-                <p>Hi! My name is Rebecca Chavez, and I'm an intermediate web developer with experience in HTML, CSS, JavaScript, React.js, and more!</p>
-                <p>Having spent almost a decade in advertising and media production, the transition into the role of a web developer has been seamless, and exciting. As a lifetime learner that is consistently aiming to become better, I'm looking forward to finding out how I can help you and your team on your next project!</p>
+                <p>Hi! My name is Rebecca Chavez, and I'm an intermediate web developer with 5+ years experience in front-end development along with 7+ years experience in media and advertising.</p>
+                <p>I'm a developer that deeply understands the importance of effective communication, ego-free teamwork, and independent problem solving. I am extremely excited for a chance to hear how I can help you and your team!</p>
+                <p>Skills include JavaScript, React.js, Redux, HTML5, CSS3, SASS, Git, and more. This website was built using React.js.</p>
                 <div className='aboutButtons'>
                     <SmoothLink to='portfolioContainer' button='true' label='Portfolio' effect='white-button'/>
                     <SmoothLink to='contact' button='true' label='Contact' effect='white-button'/>

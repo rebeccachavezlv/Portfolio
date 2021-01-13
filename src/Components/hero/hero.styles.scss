@@ -1,3 +1,19 @@
+$phone-width: 414px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+
 .Hero {
     height: 100vh;
     display: flex;
@@ -10,6 +26,11 @@
         color: #272341;
         font-size: 3.5rem;
         margin-bottom: 20px;
+
+        @include phone {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
     }
 
     & .boldText {
@@ -25,6 +46,10 @@
         flex-direction: row;
         text-decoration: none;
         margin-bottom: 20px;
+
+        @include phone {
+            flex-direction: column;
+        }
 
 
         & a {
