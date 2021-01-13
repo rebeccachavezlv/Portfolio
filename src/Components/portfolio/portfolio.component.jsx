@@ -10,6 +10,8 @@ class Portfolio extends React.Component {
         super();
 
         this.state = {
+            counter: 0,
+            index: 0,
             items: [
                 {
                     title: 'ISS Finder',
@@ -69,10 +71,24 @@ class Portfolio extends React.Component {
           };
         }
 
+    createRow = () => {
+
+        let array = this.state.items
+        let {id, ...otherSectionProps} = array[this.state.index]
+        let counter = 0
+
+        for (let i=0; i<array.length; i++){
+            array.map(() => (
+                <GalleryItem key={id} {...otherSectionProps} />
+            ))
+        }
+    }
+
     render() {
         return (
             <div className='portfolioContainer'>
                 <h1>PORTFOLIO</h1>
+                {this.createRow()}
                 <div className='galleryContainer'>
                     {this.state.items.map(({id, ...otherSectionProps}) => (
                             <GalleryItem key={id} {...otherSectionProps} />
