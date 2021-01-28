@@ -2,7 +2,7 @@ import React from 'react';
 
 import './portfolio.styles.scss'
 
-import GalleryItem from './gallery.component'
+import GalleryItem from '../gallery/gallery.component'
 
 import { connect } from 'react-redux'
 
